@@ -1,17 +1,38 @@
 import React from "react";
 import "./Item.css";
 import { FaRegHeart, FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../Store/caSlice";
 
 const Item = ({ item }) => {
+  const { id, price, name, image } = item;
+  const dispatch = useDispatch();
   const favHandeller = () => {
-    console.log("mm", item.id);
+    dispatch(
+      uiActions.addItemToFavorite({
+        id,
+        price,
+        name,
+        image,
+      })
+    );
   };
   const addHandeller = () => {
-    console.log(item.name, item.price);
+    dispatch(
+      uiActions.addItemToCart({
+        id,
+        price,
+        name,
+        image,
+      })
+    );
   };
   return (
     <div className="item">
-      <img src={item.image} alt="" />
+      <Link to={`/product/${item.id}`}>
+        <img src={item.image} alt="" />
+      </Link>
       <div className="item-prices">
         <h3>{item.name}</h3>
         <div className="all-price">

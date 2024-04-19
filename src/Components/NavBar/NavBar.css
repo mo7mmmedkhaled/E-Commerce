@@ -54,6 +54,7 @@ a {
 .cart-bag {
   font-size: 29px;
   color: #009e3e;
+  cursor: pointer;
 }
 .cart-count {
   position: absolute;
@@ -71,6 +72,9 @@ a {
 .active {
   border-bottom: 2px solid rgb(255, 102, 0);
 }
+.menu{
+  display: none;
+}
 
 @media only screen and (max-width: 767px) {
   .nav-menu {
@@ -79,4 +83,11 @@ a {
   .btn {
     display: none;
   }
+  .menu{
+    display: flex;
+  }
+  .cart-count{
+    right: 46px;
+  }
+  
 }

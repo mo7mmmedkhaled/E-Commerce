@@ -6,7 +6,7 @@
 .offer-left {
   position: absolute;
   z-index: 1;
-  left: 350px;
+  left: 250px;
 }
 .offer-left h1 {
   color: beige;
@@ -41,4 +41,9 @@
   object-fit: cover;
   position: relative;
   z-index: 0;
+}
+@media only screen and (max-width: 767px) {
+  .offer-left{
+    left: 20px;
+  }
 }

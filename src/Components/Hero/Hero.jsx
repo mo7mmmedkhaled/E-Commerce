@@ -10,7 +10,9 @@ const Hero = () => {
         <p>Collection</p>
         <p>For Everyone</p>
         <div className="div-button">
-          <button>Latest Collection</button>
+          <a href="#latestCollection">
+            <button>Latest Collection</button>
+          </a>
         </div>
       </div>
     </div>

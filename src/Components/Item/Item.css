@@ -15,6 +15,9 @@
   height: 276px;
   object-fit: contain;
 }
+.item-prices h3 {
+  color: black;
+}
 .item-prices p {
   margin: 6px 0px;
 }
@@ -26,7 +29,7 @@
   justify-content: flex-end;
   width: 100%;
 }
-.all-price{
+.all-price {
   display: flex;
 }
 .item-price-new {
